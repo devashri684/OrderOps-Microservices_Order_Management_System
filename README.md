@@ -1056,8 +1056,7 @@ OrderOps represents my practical exploration of production-oriented backend engi
 ### Connect
 
 * **GitHub:** [github.com/devashri684](https://github.com/devashri684)
-* **LinkedIn:** Add your LinkedIn profile
-* **Portfolio:** Add your portfolio URL
+* **LinkedIn:** https://www.linkedin.com/in/devashri-rewanwar-281a64259
 
 ---
 
