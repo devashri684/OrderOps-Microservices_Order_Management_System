@@ -61,6 +61,99 @@ Instead of implementing the entire application as a single monolith, the system 
 The project focuses particularly on **security, service-to-service communication and failure handling** — areas that are important when designing distributed backend systems.
 
 ---
+### Application screenshot
+
+![Circuit Breaker Fallback](./assets/circuit-breaker.png)
+
+The application displays a controlled fallback message rather than exposing an unhandled backend exception.
+
+---
+
+# 📚 Swagger API Documentation
+
+OrderOps provides centralized API documentation through Swagger/OpenAPI.
+
+![Swagger API Aggregation](./assets/swagger-aggregation.png)
+
+The Gateway provides a single location from which developers can discover and test APIs exposed by the microservices.
+
+This avoids requiring developers to remember separate Swagger URLs for every service.
+
+---
+
+# 🧪 API Testing with Postman
+
+Postman was used to test backend REST APIs and verify service-to-service functionality.
+
+![Postman API Testing](./assets/postman-api-testing.png)
+
+Testing includes:
+
+* REST endpoint validation
+* Request/response verification
+* HTTP status code validation
+* Order API testing
+* Inventory API testing
+* Authentication-aware requests
+
+---
+
+# 🔑 Keycloak Configuration
+
+The project uses Keycloak for centralized authentication and authorization.
+
+### Client Configuration
+
+![Keycloak Client Configuration](./assets/keycloak-config.png)
+
+### User Configuration
+
+![Keycloak User Configuration](./assets/keycloak-user-config.png)
+
+The frontend authenticates through Keycloak and uses the resulting access token when communicating with protected backend APIs.
+
+---
+
+# 🖥️ Application Dashboard
+
+![OrderOps Dashboard](./assets/dashboard.png)
+
+The dashboard provides the primary user interface for interacting with the OrderOps platform.
+
+It demonstrates:
+
+* Order creation
+* Order information
+* Confirmed orders
+* Backend API integration
+* Authentication
+* Error handling
+
+---
+
+# 🐳 Docker Environment
+
+![Docker Containers](./assets/docker-containers.png)
+
+Docker is used to provide a reproducible local development environment for the application's infrastructure.
+
+The environment can be started using:
+
+```bash
+docker compose up -d
+```
+
+Check running containers:
+
+```bash
+docker ps
+```
+
+Stop the environment:
+
+```bash
+docker compose down
+```
 
 # 🚀 Core Features
 
@@ -491,102 +584,6 @@ Fallback Handler
      ↓
 Controlled Error Response
 ```
-
-### Application screenshot
-
-![Circuit Breaker Fallback](./assets/circuit-breaker.png)
-
-The application displays a controlled fallback message rather than exposing an unhandled backend exception.
-
----
-
-# 📚 Swagger API Documentation
-
-OrderOps provides centralized API documentation through Swagger/OpenAPI.
-
-![Swagger API Aggregation](./assets/swagger-aggregation.png)
-
-The Gateway provides a single location from which developers can discover and test APIs exposed by the microservices.
-
-This avoids requiring developers to remember separate Swagger URLs for every service.
-
----
-
-# 🧪 API Testing with Postman
-
-Postman was used to test backend REST APIs and verify service-to-service functionality.
-
-![Postman API Testing](./assets/postman-api-testing.png)
-
-Testing includes:
-
-* REST endpoint validation
-* Request/response verification
-* HTTP status code validation
-* Order API testing
-* Inventory API testing
-* Authentication-aware requests
-
----
-
-# 🔑 Keycloak Configuration
-
-The project uses Keycloak for centralized authentication and authorization.
-
-### Client Configuration
-
-![Keycloak Client Configuration](./assets/keycloak-config.png)
-
-### User Configuration
-
-![Keycloak User Configuration](./assets/keycloak-user-config.png)
-
-The frontend authenticates through Keycloak and uses the resulting access token when communicating with protected backend APIs.
-
----
-
-# 🖥️ Application Dashboard
-
-![OrderOps Dashboard](./assets/dashboard.png)
-
-The dashboard provides the primary user interface for interacting with the OrderOps platform.
-
-It demonstrates:
-
-* Order creation
-* Order information
-* Confirmed orders
-* Backend API integration
-* Authentication
-* Error handling
-
----
-
-# 🐳 Docker Environment
-
-![Docker Containers](./assets/docker-containers.png)
-
-Docker is used to provide a reproducible local development environment for the application's infrastructure.
-
-The environment can be started using:
-
-```bash
-docker compose up -d
-```
-
-Check running containers:
-
-```bash
-docker ps
-```
-
-Stop the environment:
-
-```bash
-docker compose down
-```
-
----
 
 # 🗄️ Data Architecture
 
